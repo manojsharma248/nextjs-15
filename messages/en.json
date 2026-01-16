@@ -1,0 +1,16 @@
+{
+  "product": {
+    "title": "Product Page",
+    "productLabel": "Product ID",
+    "description": "This is the details page for product",
+    "price": "Price",
+    "availability": "Availability",
+    "inStock": "In Stock",
+    "addToCart": "Add to Cart",
+    "currentLanguage": "Current Language"
+  },
+  "metadata": {
+    "title": "Product {productId} Details",
+    "description": "Details about product {productId}"
+  }
+}

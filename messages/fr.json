@@ -1,0 +1,16 @@
+{
+  "product": {
+    "title": "Page du Produit",
+    "productLabel": "ID du Produit",
+    "description": "Ceci est la page de détails du produit",
+    "price": "Prix",
+    "availability": "Disponibilité",
+    "inStock": "En Stock",
+    "addToCart": "Ajouter au Panier",
+    "currentLanguage": "Langue Actuelle"
+  },
+  "metadata": {
+    "title": "Détails du Produit {productId}",
+    "description": "Détails sur le produit {productId}"
+  }
+}
