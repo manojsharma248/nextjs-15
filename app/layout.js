@@ -1,8 +1,10 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Next.js 15 Demo",
-  description: "Next.js 15 application",
+  title: {
+    default: "Next.js 15 App",
+    template: "%s | Next.js 15 App",
+  },
 };
 
 export default function RootLayout({ children }) {
