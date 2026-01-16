@@ -12,5 +12,22 @@
   "metadata": {
     "title": "Product {productId} Details",
     "description": "Details about product {productId}"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "continueShopping": "Continue Shopping",
+    "item": "Item",
+    "price": "Price",
+    "quantity": "Quantity",
+    "total": "Total",
+    "subtotal": "Subtotal",
+    "tax": "Tax",
+    "shipping": "Shipping",
+    "grandTotal": "Grand Total",
+    "checkout": "Proceed to Checkout",
+    "remove": "Remove",
+    "itemsInCart": "{count} items in cart",
+    "currentLanguage": "Current Language"
   }
 }

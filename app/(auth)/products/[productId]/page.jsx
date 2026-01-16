@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import AddToCartButton from "./AddToCartButton";
 
 export default async function Product({ params, searchParams }) {
   const { productId } = await params;
@@ -29,9 +30,7 @@ export default async function Product({ params, searchParams }) {
             <span className="font-semibold">{t("availability")}:</span>{" "}
             <span className="text-green-600">{t("inStock")}</span>
           </p>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
-            {t("addToCart")}
-          </button>
+          <AddToCartButton label={t("addToCart")} />
         </div>
 
         {/* Language indicator */}

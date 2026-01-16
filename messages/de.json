@@ -12,5 +12,22 @@
   "metadata": {
     "title": "Produktdetails {productId}",
     "description": "Details über Produkt {productId}"
+  },
+  "cart": {
+    "title": "Warenkorb",
+    "empty": "Ihr Warenkorb ist leer",
+    "continueShopping": "Weiter Einkaufen",
+    "item": "Artikel",
+    "price": "Preis",
+    "quantity": "Menge",
+    "total": "Gesamt",
+    "subtotal": "Zwischensumme",
+    "tax": "Steuer",
+    "shipping": "Versand",
+    "grandTotal": "Gesamtsumme",
+    "checkout": "Zur Kasse",
+    "remove": "Entfernen",
+    "itemsInCart": "{count} Artikel im Warenkorb",
+    "currentLanguage": "Aktuelle Sprache"
   }
 }

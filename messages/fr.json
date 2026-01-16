@@ -12,5 +12,22 @@
   "metadata": {
     "title": "Détails du Produit {productId}",
     "description": "Détails sur le produit {productId}"
+  },
+  "cart": {
+    "title": "Panier d'Achat",
+    "empty": "Votre panier est vide",
+    "continueShopping": "Continuer les Achats",
+    "item": "Article",
+    "price": "Prix",
+    "quantity": "Quantité",
+    "total": "Total",
+    "subtotal": "Sous-total",
+    "tax": "Taxe",
+    "shipping": "Expédition",
+    "grandTotal": "Total Général",
+    "checkout": "Passer à la Caisse",
+    "remove": "Supprimer",
+    "itemsInCart": "{count} articles dans le panier",
+    "currentLanguage": "Langue Actuelle"
   }
 }
