@@ -1,3 +1,4 @@
+import ErrorWrapper from "./error-wrapper";
 import "./globals.css";
 
 export const metadata = {
@@ -8,9 +9,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // Uncomment the line below to test global-error.jsx
+  //   throw new Error("Layout error - this will trigger global-error.jsx!");
+
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ErrorWrapper>{children}</ErrorWrapper>
+      </body>
     </html>
   );
 }
