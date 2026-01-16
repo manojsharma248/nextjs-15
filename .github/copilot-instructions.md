@@ -1,6 +1,7 @@
 # Next.js 15 Demo Project
 
 ## Project Information
+
 - Framework: Next.js 15
 - Language: JavaScript
 - Styling: Tailwind CSS
@@ -9,6 +10,7 @@
 - Build Tool: Turbopack
 
 ## Development Guidelines
+
 - Use App Router for routing
 - Follow JavaScript best practices
 - Use Tailwind CSS for styling
