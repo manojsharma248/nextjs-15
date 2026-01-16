@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
-  console.log("Current pathname:", pathname);
+  const [input, setInput] = useState("");
   let isActive = (path) => pathname === path;
   return (
     <html lang="en">
@@ -29,6 +30,13 @@ export default function RootLayout({ children }) {
             </Link>
           </nav>
         </header>
+        <input
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 placeholder-gray-400 w-64"
+          placeholder="Search..."
+        />
         {children}
       </body>
       <footer className="bg-gray-800 text-white py-6 px-4 mt-auto">
