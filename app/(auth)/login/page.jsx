@@ -3,6 +3,8 @@ export const metadata = {
     absolute: "Login - My App",
   },
 };
-export default function Login() {
+export default async function Login() {
+  const timer = new Promise((resolve) => setTimeout(resolve, 2000));
+  await timer;
   return <div>Login Page</div>;
 }
