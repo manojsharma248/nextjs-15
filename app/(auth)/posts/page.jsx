@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default async function Posts() {
   const posts = await fetch("https://jsonplaceholder.typicode.com/posts", {
     cache: "force-cache", // or "no-store" for fresh data
@@ -16,10 +18,19 @@ export default async function Posts() {
       <div className="space-y-4">
         {postsData.length > 0 &&
           postsData.slice(0, 5).map((post) => (
-            <div key={post.id} className="border rounded-lg p-4 shadow-sm">
-              <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
-              <p className="text-gray-600">{post.body}</p>
-            </div>
+            <Link
+              key={post.id}
+              href={`/posts/${post.id}`}
+              className="block border rounded-lg p-4 shadow-sm hover:shadow-md hover:border-blue-500 transition-all duration-200"
+            >
+              <h2 className="text-xl font-semibold mb-2 text-blue-600 hover:text-blue-800">
+                {post.title}
+              </h2>
+              <p className="text-gray-600 line-clamp-2">{post.body}</p>
+              <div className="mt-3 text-sm text-blue-500 font-medium">
+                Read more →
+              </div>
+            </Link>
           ))}
       </div>
     </div>
