@@ -3,7 +3,14 @@ export default function ComplexDashboardLayout({
   notifications,
   users,
   revenues,
+  login,
 }) {
+  const isLoggedIn = false;
+
+  if (!isLoggedIn) {
+    return <div>{login}</div>;
+  }
+
   return (
     <div className="min-h-screen bg-gray-100">
       <header className="bg-white shadow-sm border-b border-gray-200 px-6 py-4">
