@@ -1,4 +1,5 @@
 import Card from "../../components/Card";
+import Link from "next/link";
 
 export default function NotificationSlot() {
   const notifications = [
@@ -43,6 +44,14 @@ export default function NotificationSlot() {
 
   return (
     <Card title="Notifications" className="h-full">
+      <div className="mb-4 flex justify-end">
+        <Link
+          href="/complex-dashboard/archived"
+          className="text-sm text-blue-600 hover:text-blue-800 hover:underline transition"
+        >
+          View Archived →
+        </Link>
+      </div>
       <div className="space-y-3">
         {notifications.map((notification) => (
           <div
