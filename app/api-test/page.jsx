@@ -15,6 +15,7 @@ export default function APITestPage() {
         method,
         headers: {
           "Content-Type": "application/json",
+          Authorization: "Bearer test-token",
         },
       };
 

@@ -1,10 +1,13 @@
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 import { db } from "@/lib/db";
 
 // GET /api/users - Get all users
 export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
+    const headers = new Headers(request.headers);
+    console.log("Request Headers:", Object.fromEntries(headers.entries()));
     const email = searchParams.get("email");
 
     // Filter by email if provided
@@ -56,6 +59,18 @@ export async function POST(request) {
       name: body.name,
       email: body.email,
       role: body.role || "user",
+    });
+
+    // Set cookies
+    const cookieStore = await cookies();
+    cookieStore.set("userId", newUser.id.toString(), {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      maxAge: 60 * 60 * 24 * 7, // 7 days
+    });
+    cookieStore.set("userName", newUser.name, {
+      maxAge: 60 * 60 * 24 * 7, // 7 days
     });
 
     return NextResponse.json(
